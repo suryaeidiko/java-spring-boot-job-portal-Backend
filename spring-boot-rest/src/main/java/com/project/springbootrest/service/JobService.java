@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +39,7 @@ public class JobService {
 
     public void load() {
 
-        List<JobPost> jobs = new ArrayList<>(Arrays.asList(
+        List<JobPost> jobs = new ArrayList<>(List.of(
         new JobPost(1,"ABC","Iam ABC","2",List.of("Reactjs")),
         new JobPost(2,"XYZ","Iam xyz","5",List.of("HTML","CSS")),
         new JobPost(3,"Surya","Iam surya","1.5",List.of("HTML","CSS","Java")),
