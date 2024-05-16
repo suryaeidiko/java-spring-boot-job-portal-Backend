@@ -1,0 +1,40 @@
+	JOBPOST APP
+===================
+
+	postId, username, postDesc, experience, postTechStack	this are the fields in the portal
+	
+	id, username, password, role    this are the fields for login user Details in DB
+	
+	
+	URL's
+=============
+
+GET
+====
+
+http://localhost:8002/load					-->  load the portal details
+http://localhost:8002/jobPosts				-->  get all jobPosts
+http://localhost:8002/jobPost/4				-->  get jobPost by using id
+http://localhost:8002/jobPost/keyword/2		-->  get jobPosts by using keyword
+
+
+POST
+=====
+http://localhost:8002/jobPost				-->  add jobPost to portal
+
+PUT
+====
+http://localhost:8002/jobPost				-->  update existing jobPost
+
+DELETE
+=======
+http://localhost:8002/jobPost/4				-->  delete jobPost using id
+
+
+	Access
+===============
+
+Admin can access all endpoints(ADMIN)
+user can access only this "/jobPosts","/jobPost/{postId}","/jobPost/keyword/{keyword}"  endpoints(USER)
+
+

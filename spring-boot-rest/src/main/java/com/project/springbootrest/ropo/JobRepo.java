@@ -1,14 +1,17 @@
 package com.project.springbootrest.ropo;
 
+import com.project.springbootrest.model.AppUsers;
 import com.project.springbootrest.model.JobPost;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface JobRepo extends JpaRepository<JobPost,Integer> {
     List<JobPost> findByUsernameContainingOrExperienceContainingOrPostDescContaining(String username,String experience,String postDesc);
+//    Optional<AppUsers> findByUsername(String username);
 
 }
 
